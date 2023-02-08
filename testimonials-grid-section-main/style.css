@@ -1,0 +1,532 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+*::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    overflow:hidden;
+    height:100%;
+ }
+ 
+ body{
+    position:relative;
+    overflow-y:scroll;
+    height:100%;
+    -webkit-overflow-scrolling:touch; /* So iOS Safari gets the inertia & rubber-band effect */
+ }
+
+section{
+    width: 100%;
+    padding: 4.375rem 0.9375rem;
+    /* 70px 15px; */
+}
+
+section :not(:last-child){
+    margin-bottom: 1.25rem; /*20px*/
+}
+
+.daniel{
+    position: relative;
+    background-color: rgb(117, 65, 200);
+    border-radius: 8px;
+    padding: 25px 25px;
+}
+
+.box1{
+    display: flex;
+    width: 9.375rem; /*150px;*/
+    height: 2.5rem; /*40px*/
+    justify-content: space-between;
+}
+
+.box1 .name_daniel{
+    margin-top: 6px;
+    margin-bottom: 1px;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.box1 .verified_daniel{
+    margin-top: 0;
+    color: whitesmoke;
+    opacity: 50%;
+    font-weight: 500;
+}
+
+.pic_container1{
+    position: relative;
+    width: 2.5rem; /*40px*/
+    height: 2.5rem; /*40px;*/
+    border-radius: 50%;
+    background-color: darkgray;
+}
+
+.pic_container1 .daniel_pic{
+    position: absolute;
+    width: 2.1875rem; /*35px;*/
+    height: 2.1875rem; /*35px;*/
+    border-radius: 50%;
+    left: 50%;
+    top: 1px;
+    transform: translate(-50%, 4%);
+}
+
+.text_container1 p{
+    font-size: 13px;
+}
+
+.quote{
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    width: 6.875rem; /*110px;*/
+    height: 6.875rem; /*110px;*/
+    opacity: 0.8;
+}
+
+.daniel .header1{
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    width: 300px;
+}
+
+.header1 .first::after{
+    content: "\a";
+    white-space: pre;
+}
+
+.header1 .second::after{
+    content: "\a";
+    white-space: pre;
+}
+
+.header1 .third::after{
+    content: "\a";
+    white-space: pre;
+}
+
+.header1 .fourth::after{
+    content: "\a";
+    white-space: pre;
+}
+
+.header1 .fifth::after{
+    content: "\a";
+    white-space: pre;
+}
+
+.daniel .sentence1{
+    font-size: 13px;
+    font-weight: 500;
+    color: whitesmoke;
+    opacity: 70%;
+}
+
+.jonathan{
+    position: relative;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 8px;
+    padding: 25px 25px;
+}
+
+.box2{
+    display: flex;
+    width: 9.375rem; /*150px;*/
+    justify-content: space-between;
+}
+
+.box2 .name_jonathan{
+    margin-top: 6px;
+    margin-bottom: 1px;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.box2 .verified_jonathan{
+    margin-top: 0;
+    color: whitesmoke;
+    opacity: 50%;
+    font-weight: 500;
+}
+
+.pic_container2{
+    position: relative;
+    width: 2.5rem; /*40px;*/
+    height: 2.5rem; /*40px;*/
+    border-radius: 50%;
+    background-color: darkgray;
+}
+
+.pic_container2 .jonathan_pic{
+    position: absolute;
+    width: 2.1875rem; /*35px;*/
+    height: 2.1875rem; /*35px;*/
+    border-radius: 50%;
+    left: 50%;
+    top: 1px;
+    transform: translate(-50%, 4%);
+}
+
+.text_container2 p{
+    font-size: 13px;
+}
+
+.jonathan .header2{
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    width: 18.75rem; /*300px;*/
+}
+
+.header2 .first{
+    content: "\a";
+    white-space: pre;
+}
+
+.jonathan .sentence2{
+    font-size: 13px;
+    color: darkgray;
+}
+
+.jeanette{
+    position: relative;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    padding: 1.5625rem 1.5625rem; /*25px 25px;*/
+    box-shadow: 1px 1px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+.box3{
+    display: flex;
+    width: 9.375rem; /*150px;*/
+    height: 2.5rem; /*40px;*/
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
+.box3 .name_jeanette{
+    margin-top: 6px;
+    margin-bottom: 1px;
+    color: darkslateblue;
+    font-weight: 600;
+}
+
+.box3 .verified_jeanette{
+    margin-top: 0;
+    color: darkslateblue;
+    opacity: 50%;
+    font-weight: 500;
+}
+
+.pic_container3{
+    position: relative;
+    width: 2.5rem; /*40px;*/
+    height: 2.5rem; /*40px;*/
+    border-radius: 50%;
+    background-color: darkgray;
+}
+
+.pic_container3 .jeanette_pic{
+    position: absolute;
+    width: 2.1875rem; /*35px;*/
+    height: 2.1875rem; /*35px;*/
+    border-radius: 50%;
+    left: 50%;
+    top: 1px;
+    transform: translate(-50%, 4%);
+}
+
+.text_container3 p{
+    font-size: 13px;
+}
+
+.jeanette .header3{
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    width: 200px;
+    color: hsl(219, 29%, 14%);
+    opacity: 70%;
+}
+
+.header3 .first{
+    content: "\a";
+    white-space: pre;
+}
+
+.jeanette .sentence3{
+    font-size: 13px;
+    color: darkgray;
+}
+
+.patrick{
+    position: relative;
+    background-color: hsl(219, 29%, 14%);
+    border-radius: 8px;
+    padding: 1.5625rem 1.5625rem; /*25px 25px;*/
+}
+
+.box4{
+    display: flex;
+    width: 9.375rem; /*150px;*/
+    height: 2.5rem; /*40px;*/
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
+.box4 .name_patrick{
+    margin-top: 6px;
+    margin-bottom: 1px;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.box4 .verified_patrick{
+    margin-top: 0;
+    color: whitesmoke;
+    opacity: 50%;
+    font-weight: 500;
+}
+
+.pic_container4{
+    position: relative;
+    width: 2.5rem; /*40px;*/
+    height: 2.5rem; /*40px;*/
+    border-radius: 50%;
+    background-color: hsl(263, 55%, 52%);
+}
+
+.pic_container4 .patrick_pic{
+    position: absolute;
+    width: 2.1875rem; /*35px;*/
+    height: 2.1875rem; /*35px;*/
+    border-radius: 50%;
+    left: 50%;
+    top: 1px;
+    transform: translate(-50%, 4%);
+}
+
+.text_container4 p{
+    font-size: 13px;
+}
+
+.patrick .header4{
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 400;
+    color: whitesmoke;
+    width: 16.875rem; /*270px;*/
+}
+
+.header4 .first::after{
+    content: "\a";
+    white-space: pre;
+}
+
+.patrick .sentence4{
+    font-size: 13px;
+    color: whitesmoke;
+    opacity: 70%;
+}
+
+.kira{
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px 25px;
+    box-shadow: 1px 1px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+.box5{
+    display: flex;
+    width: 9.375rem; /*150px;*/
+    height: 2.5rem; /*40px;*/
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
+.box5 .name_kira{
+    margin-top: 6px;
+    margin-bottom: 1px;
+    color: darkslateblue;
+    font-weight: 600;
+}
+
+.box5 .verified_kira{
+    margin-top: 0;
+    color: darkslateblue;
+    opacity: 50%;
+    font-weight: 500;
+}
+
+.pic_container5{
+    position: relative;
+    width: 2.5rem; /*40px;*/
+    height: 2.5rem; /*40px;*/
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+
+.pic_container5 .kira_pic{
+    position: absolute;
+    width: 2.1875rem; /*35px;*/
+    height: 2.1875rem; /*35px;*/
+    border-radius: 50%;
+    left: 50%;
+    top: 1px;
+    transform: translate(-50%, 4%);
+}
+
+.text_container5 p{
+    font-size: 13px;
+}
+
+.kira .header5{
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    color: hsl(219, 29%, 14%);
+    opacity: 70%;
+    width: 16.1875rem; /*270px;*/
+}
+
+.kira .sentence5{
+    font-size: 13px;
+    color: hsl(219, 29%, 14%);
+    opacity: 50%;
+    font-weight: 600;
+}
+
+/* tablet breakpoint*/
+@media (min-width: 550px){
+    .daniel .header1 .first::after{
+        content: "";
+        white-space: none;
+    }
+
+    .daniel .header1 .second::after{
+        content: "";
+        white-space: none;
+    }
+
+    .daniel .header1 .third::after{
+        content: "";
+        white-space: none;
+    }
+
+    .daniel .header1 .fourth::after{
+        content: "";
+        white-space: none;
+    }
+
+    .daniel .header1 .fifth::after{
+        content: "";
+        white-space: none;
+    }
+
+    .daniel .header1{
+        width: 100%;
+        margin: 0px;
+    }
+
+    .jonathan .header2 .first{
+        content: "";
+        white-space: none;
+    }
+
+    .jonathan .header2{
+        width: 100%;
+    }
+
+    .jeanette .header3 .first::after{
+        content: "";
+        white-space: none;
+    }
+
+    .jeanette .header3{
+        width: 100%;
+    }
+
+    .patrick .header4 .first::after{
+        content: "";
+        white-space: none;
+    }
+
+    .patrick .header4{
+        width: 100%;
+    }
+
+    .kira .header5 .first::after{
+        content: "";
+        white-space: none;
+    }
+
+    .kira .header5{
+        width: 100%;
+    }
+}
+
+/*desktop breakpoint*/
+@media (min-width: 1000px){
+    body{
+        padding: 100px 100px;
+    }
+   section{
+       display: grid;
+       box-shadow: 2px 3px 20px 1px rgba(59, 58, 58, 0.1);
+       padding: 0px 0px;
+       border-radius: 10px;
+       grid-template-rows: minmax(auto);
+       grid-gap: 20px;
+       grid-template-columns: repeat(5, 1fr);
+       grid-template-areas:
+       "daniel daniel daniel jonathan kira"
+       "daniel daniel daniel jonathan kira"
+       "daniel daniel daniel jonathan kira"
+       "jeanette patrick patrick patrick kira"
+       "jeanette patrick patrick patrick kira";
+   }
+
+   section div.daniel, div.jeanette, div.jonathan, div.patrick, div.kira{
+       margin: 0;
+   }
+
+   section .daniel{
+       grid-area: daniel;
+       /* grid-column: 1/4;
+       grid-row: 1/2;
+       margin: 0px; */
+   }
+
+   section .jonathan{
+       grid-area: jonathan;
+   }
+
+   section .kira{
+       grid-area: kira;
+   }
+
+   section .jeanette{
+       grid-area: jeanette;
+   }
+
+   section .patrick{
+       grid-area: patrick;
+   }
+
+   footer{
+    text-align: center;
+}
+}
+
+footer{
+    text-align: center;
+}
