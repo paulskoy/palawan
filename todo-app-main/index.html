@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Todo app</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script defer src="script.js"></script>
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Todo</h1>
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+    <div class="create_todo">
+      <label class="circle">
+        <input type="checkbox" class="check">
+        <span class="ball"></span>
+      </label>
+      <span class="placeholder">Create a new todo...</span>
+      <input type="text">
+    </div>
+
+    <ul class="todos">
+      <li> 
+        <label>
+          <input type="checkbox" class="check">
+          <span class="circle">
+            <img src="./images/icon-check.svg" class="image_check">
+          </span>
+          <span class="back_circle"></span>
+          <span class="todo">Complete online JavaScript course</span>
+        </label>
+        <span class="x"></span>
+      </li>
+      
+      <li>
+        <label>
+          <input type="checkbox" class="check">
+          <span class="circle">
+            <img src="./images/icon-check.svg" class="image_check">
+          </span>
+          <span class="back_circle"></span>
+          <span class="todo">Jog around the park 3x</span>
+        </label>
+        <span class="x"></span>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" class="check">
+          <span class="circle">
+            <img src="./images/icon-check.svg" class="image_check">
+          </span>
+          <span class="back_circle"></span>
+          <span class="todo">10 minutes meditation</span>
+        </label>
+        <span class="x"></span>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" class="check">
+          <span class="circle">
+            <img src="./images/icon-check.svg" class="image_check">
+          </span>
+          <span class="back_circle"></span>
+          <span class="todo">Read for 1 hour</span>
+        </label>
+        <span class="x"></span>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" class="check">
+          <span class="circle">
+            <img src="./images/icon-check.svg" class="image_check">
+          </span>
+          <span class="back_circle"></span>
+          <span class="todo">Pick up groceries</span>
+        </label>
+        <span class="x"></span>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" class="check">
+          <span class="circle">
+            <img src="./images/icon-check.svg" class="image_check">
+          </span>
+          <span class="back_circle"></span>
+          <span class="todo">Complete Todo App on Frontend Mentor</span>
+        </label>
+        <span class="x"></span>
+      </li>
+    </ul>
+
+    <div class="task_count">
+      <span class="items_left"> <span class="update">6</span> items left</span>
+      <span>all</span>
+      <span>active</span>
+      <span>completed</span>
+      <span class="clear_completed">Clear Completed</span>
+    </div>
+    
+    <div class="sort">
+      <span>all</span>
+      <span>active</span>
+      <span>completed</span>
+    </div>
+
+    <div class="drag_drop">
+      Drap and drop to reopen list
+    </div>
+  </main>
+</body>
+</html>
