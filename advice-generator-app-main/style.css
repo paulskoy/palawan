@@ -1,0 +1,107 @@
+:root{
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: rgb(82, 255, 168);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+*::before, *::after, *{
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+}
+
+body{
+    padding: 20px;
+    background-color: var(--dark-blue);
+}
+
+main{
+    position: relative;
+    top: 88px;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 500px;
+    height: 400px;
+    background-color: var(--dark-grayish-blue);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.container .advice-number{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--neon-green);
+    opacity: 0.7;
+}
+
+.container .advice{
+    display: inline-block;
+    width: 335px;
+    height: 148px;
+    font-size: 25px;
+    text-align: center;
+    color: var(--light-cyan);
+    padding: 0 5px 0 5px;
+}
+
+.container .divider{
+    display: inline-block;
+    width: 100%;
+    height: 17px;
+    background-image: url(./images/pattern-divider-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 34px;
+}
+
+.container .dice-container{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -24px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    
+
+}
+
+.container .dice-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0 34px rgb(82, 255, 168);
+}
+
+.container .dice-container img{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* breakpoint for desktop */
+@media (min-width: 1000px) {
+    main{
+        position: relative;
+        top: 88px;
+        max-width: 600px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .container .advice{
+        width: 421px;
+    }
+
+    .container .divider{
+        background-image: url(./images/pattern-divider-desktop.svg);
+    }
+
+}
