@@ -1,0 +1,111 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: rgb(160, 135, 103);
+}
+
+.turn{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+    /* border: 1px solid black; */
+}
+
+.turn span{
+    margin-right: 5px;
+}
+
+.board{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+.board .cell{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.board .cell.x::before,
+.board .cell.x:after{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: rgb(63, 59, 53);
+    border-radius: 10px;
+}
+
+.board .cell.x::before{
+    transform: rotate(45deg);
+}
+
+.board .cell.x::after{
+    transform: rotate(-45deg);
+}
+
+.board .cell.circle::before{
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 100px;
+    border: 10px solid rgb(129, 97, 56);
+    border-radius: 50%;
+}
+
+.board .cell:not(.x):not(.circle):hover{
+    transform: scale(1.02);
+    transition: transform .1s ease-in;
+}
+
+.scoreboard{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 300px;
+    height: 50px;
+    /* border: 1px solid black; */
+}
+
+.scoreboard .x-score,
+.scoreboard .circle-score{
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-weight: 700;
+    color: white;
+}
+
+.scoreboard .x-score div,
+.scoreboard .circle-score div{
+    font-size: 25px;
+    color: white;
+}
+
