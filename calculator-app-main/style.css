@@ -1,0 +1,495 @@
+:root{
+    /* theme 1 */
+    /* backgrounds */
+    --very-dark-desaturated-blue1: hsl(222, 26%, 31%); /*main background*/
+    --very-dark-desaturated-blue2: hsl(223, 31%, 20%); /*toggle background, keypad background*/
+    --very-dark-desatureated-blue3: hsl(224, 36%, 15%); /*screen background*/
+
+    /* keys */
+    --desaturated-dark-blue1: hsl(225, 21%, 49%); /*key background*/
+    --desaturated-dark-blue2: rgb(64, 78, 114); /*key shadow*/
+    --red: hsl(6, 63%, 50%); /*key background, toggle*/
+    --dark-red: rgb(147, 38, 26); /*key shadow*/
+    --light-grayish-orange: hsl(30, 25%, 89%); /*key background*/
+    --grayish-orange: rgb(180, 165, 151); /*key shadow*/
+
+    /*text*/
+    --very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --white: hsl(0, 0, 100%);
+
+    /* theme 2*/
+    /*background*/
+    --light-gray: hsl(0, 0%, 90%); /*main background*/
+    --grayish-red: hsl(0, 5%, 81%); /*toggle background, keypad background*/
+    --very-light-gray: hsl(0, 0%, 93%); /*screen background*/
+
+    /* keys */
+    --dark-moderate-cyan: hsl(185, 42%, 37%); /*key background*/
+    --very-dark-cyan: hsl(185, 58%, 25%); /*key shadow*/
+    --orange: hsl(25, 98%, 40%); /*key background toggle*/
+    --dark-orange:  hsl(25, 99%, 27%); /*key shadow*/
+    --light-grayish-yellow: hsl(45, 7%, 89%);/*key background*/
+    --dark-grayish-orange: hsl(35, 11%, 61%); /*key shadow*/
+
+    /*text*/
+    --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    /* - White (text): hsl(0, 0, 100%) */
+
+    /* theme 3 */
+    --very-dark-violet1: hsl(268, 75%, 9%); /*main background*/
+    --very-dark-violet2: hsl(268, 71%, 12%); /*toggle background, keypad background, screen background*/
+
+    /* keys */
+    --dark-violet: hsl(281, 89%, 26%);/*key background*/
+    --vivid-magenta: hsl(285, 91%, 52%); /*key shadow*/
+    --pure-cyan: hsl(176, 100%, 44%); /*key background, toggle*/
+    --soft-cyan: hsl(177, 92%, 70%); /*key shadow*/
+    --very-dark-violet: hsl(268, 47%, 21%); /*key background*/
+    --dark-magenta: hsl(290, 70%, 36%); /*key shadow*/
+
+    /*text*/
+    --light-yellow: hsl(52, 100%, 62%);
+    --very-dark-blue: hsl(198, 20%, 13%);
+    /* - White (text): hsl(0, 0, 100%) */
+
+    /* font size (numbers) 32px*/
+
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+html{
+    overflow:hidden;
+    height:100%;
+}
+ 
+body{
+    position:relative;
+    overflow-y:scroll;
+    height:100%;
+    -webkit-overflow-scrolling:touch; /* So iOS Safari gets the inertia & rubber-band effect */
+}
+
+body{
+    background-color: var(--very-dark-desaturated-blue1);
+    transition: .3s ease-in-out;
+}
+
+body.theme2{
+    background-color: var(--light-gray);
+}
+
+body.theme3{
+    background-color: var(--very-dark-violet1);
+}
+
+.first_part{
+    display: flex;
+    justify-content: space-between;
+    width: 363px;
+    margin: auto;
+    padding: 10px;
+}
+
+.first_part .calc{
+    font-size: 32px;
+    color: white;
+    transition: .3s ease-in-out
+}
+
+.first_part .calc.theme2{
+    color: var(--very-dark-grayish-yellow);
+}
+
+.first_part .calc.theme3{
+    color: var(--light-yellow);
+}
+
+.first_part .container{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    color: white;
+    text-transform: uppercase;
+}
+
+.container .theme{
+    position: relative;
+    top: 20px;
+    font-size: 13px;
+    font-weight: 100;
+    color: var(--white);
+}
+
+.container .theme.theme2{
+    color: var(--very-dark-grayish-yellow);
+}
+
+.container .theme.theme3{
+    color: var(--light-yellow);
+}
+
+.container .small_box{
+    font-size: 10px;
+    width: 84px;
+    margin-left: 5px;
+    text-align: right;
+}
+
+.small_box span{
+    letter-spacing: 14px;
+}
+
+.small_box span.theme2{
+    color: var(--very-dark-grayish-yellow);
+}
+
+.small_box span.theme3{
+    color: var(--light-yellow);
+}
+
+.small_box .oval{
+    display: inline-block;
+    position: relative;
+    left: -8px;
+    width: 68px;
+    height: 25px;
+    border-radius: 18px;
+    margin-top: 2px;
+    background-color: var(--very-dark-desaturated-blue2);
+    cursor: pointer;
+}
+
+.small_box .oval.theme2{
+    background-color: var(--grayish-red);
+}
+
+.small_box .oval.theme3{
+    background-color: var(--very-dark-violet2);
+}
+
+.small_box input{
+    position: absolute;
+    top: 7%;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer;
+    margin-right: 2px;
+    margin: 0;
+    z-index: 1;
+}
+
+.oval :nth-child(1){
+    left: 2px;
+}
+
+.oval :nth-child(2){
+    left: 23px;
+}
+
+.oval :nth-child(3){
+    left: 45px;
+}
+
+.oval .ball{
+    position: absolute;
+    left: 5px;
+    top: 15%;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--red);
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+
+.oval .ball.theme2{
+    background-color: var(--orange);
+}
+
+.oval .ball.theme3{
+    background-color: var(--pure-cyan);
+}
+
+.oval .first:checked ~ .ball{
+    left: 5px
+}
+
+.oval .second:checked ~ .ball{
+    left: 27px
+}
+
+.oval .third:checked ~ .ball{
+    left: 45px
+}
+
+main .second_part{
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.second_part input{
+    width: 340px;
+    height: 80px;
+    text-align: right;
+    background-color: var(--very-dark-desatureated-blue3);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    font-size: 32px;
+    transition: .3s ease-in-out;
+}
+
+.second_part input.theme2{
+    color: var(--very-dark-grayish-yellow);
+    background-color: var(--very-light-gray);
+}
+
+.second_part input.theme3{
+    color: var(--light-yellow);
+    background-color: var(--very-dark-violet2);
+}
+
+.second_part .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    place-items: center;
+    width: 340px;
+    height: 390px;
+    background-color: var(--very-dark-desaturated-blue2);
+    border-radius: 5px;
+    padding: 15px;
+    grid-template-areas: 
+    "seven eight nine del"
+    "four five six add"
+    "one two three minus"
+    "dot zero divide multiply"
+    "reset reset equals equals";
+    transition: .3s ease-in-out;
+}
+
+.second_part .container.theme2{
+    background-color: var(--grayish-red);
+}
+
+.second_part .container.theme3{
+    background-color: var(--very-dark-violet2);
+}
+
+.second_part .container span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    background-color: var(--light-grayish-orange);
+    box-shadow: 0 4px 1px 0px rgba(180, 165, 151, 1);
+    color: rgba(35, 44, 67, 0.8);
+    border-radius: 5px;
+    width: 60px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.second_part .container span.theme2{
+    color: var(--very-dark-grayish-yellow);
+    background-color: var(--light-grayish-yellow);
+    box-shadow: 0 4px 1px 0px var(--dark-grayish-orange);
+    transition: .3s ease-in-out;
+}
+
+.second_part .container span.theme3{
+    color: var(--light-yellow);
+    background-color: var(--very-dark-violet);
+    box-shadow: 0 4px 1px 0px var(--vivid-magenta);
+    transition: .3s ease-in-out;
+}
+
+.second_part .container .seven{
+    grid-area: seven;
+}
+
+.second_part .container .eight{
+    grid-area: eight;
+}
+
+.second_part .container .nine{
+    grid-area: nine;
+}
+
+.second_part .container .del{
+    grid-area: del;
+    box-shadow: 0 4px 0px 0px rgba(64, 78, 114, 1);
+    background-color: var(--desaturated-dark-blue1);
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.second_part .container .del.theme2{
+    color: white;
+    background-color: var(--dark-moderate-cyan);
+    box-shadow: 0 4px 0 0 var(--very-dark-cyan);
+}
+
+.second_part .container .del.theme3{
+    color: white;
+    background-color: var(--dark-violet);
+    box-shadow: 0 4px 0 0 var(--vivid-magenta);
+}
+
+.second_part .container .four{
+    grid-area: four;
+}
+
+.second_part .container .five{
+    grid-area: five;
+}
+
+.second_part .container .six{
+    grid-area: six;
+}
+
+.second_part .container .add{
+    grid-area: add;
+}
+
+.second_part .container .one{
+    grid-area: one;
+}
+
+.second_part .container .two{
+    grid-area: two;
+}
+
+.second_part .container .three{
+    grid-area: three;
+}
+
+.second_part .container .minus{
+    grid-area: minus;
+}
+
+.second_part .container .dot{
+    grid-area: dot;
+}
+
+.second_part .container .zero{
+    grid-area: zero;
+}
+
+.second_part .container .divide{
+    grid-area: divide;
+}
+
+.second_part .container .multiply{
+    grid-area: multiply;
+}
+
+.second_part .container .reset{
+    grid-area: reset;
+    width: 140px;
+    font-size: 18px;
+    box-shadow: 0 4px 0px 0px rgba(64, 78, 114, 1);
+    background-color: var(--desaturated-dark-blue1);
+    color: white;
+    text-transform: uppercase;
+}
+
+.second_part .container .reset.theme2{
+    color: white;
+    background-color: var(--dark-moderate-cyan);
+    box-shadow: 0 4px 0 0 var(--very-dark-cyan);
+}
+
+.second_part .container .reset.theme3{
+    color: white;
+    background-color: var(--dark-violet);
+    box-shadow: 0 4px 0 0 var(--vivid-magenta);
+}
+
+.second_part .container .equals{
+    grid-area: equals;
+    width: 140px;
+    font-size: 18px;
+    color: white;
+    background-color: var(--red);
+    box-shadow: 0 4px 0px 0px rgb(147, 38, 26);
+}
+
+.second_part .container .equals.theme2{
+    color: white;
+    background-color: var(--orange);
+    box-shadow: 0 4px 0 0 var(--dark-orange);
+}
+
+.second_part .container .equals.theme3{
+    color: var(--very-dark-blue);
+    background-color: var(--pure-cyan);
+    box-shadow: 0 4px 0 0 var(--soft-cyan);
+}
+
+.second_part .container .seven.press,
+.second_part .container .eight.press,
+.second_part .container .nine.press,
+.second_part .container .del.press,
+.second_part .container .four.press,
+.second_part .container .five.press,
+.second_part .container .six.press,
+.second_part .container .add.press,
+.second_part .container .one.press,
+.second_part .container .two.press,
+.second_part .container .three.press,
+.second_part .container .minus.press,
+.second_part .container .dot.press,
+.second_part .container .zero.press,
+.second_part .container .divide.press,
+.second_part .container .multiply.press,
+.second_part .container .reset.press,
+.second_part .container .equals.press{
+    transform: scale(.8);
+    transition: transform .1s ease-in-out;
+}
+
+@media (min-width: 1000px) {
+    .first_part{
+        width: 500px;
+    }
+
+    .container .theme{
+        left: 90px;
+    }
+
+    .second_part input{
+        width: 500px;
+    }
+
+    .second_part .container{
+        width: 500px;
+    }
+
+    .second_part .container span{
+        width: 100px;
+    }
+
+    .second_part .container .reset{
+        width: 213px;
+    }
+
+    .second_part .container .equals{
+        width: 213px;
+    }
+
+
+}
