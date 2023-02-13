@@ -1,0 +1,1241 @@
+*, *::before, *::after{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 30px;
+    width: 40px;
+}
+
+/* style for the mobile page starts here*/
+/* style for the index page starts here */
+nav{
+    position: relative;
+    /* border: 1px solid black; */
+    width: 100%;
+    padding-top: 56%;
+    background-image: url(/background_images/brazil_main_background.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+nav .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000006b;
+}
+
+nav .burger-container{
+    display: grid;
+    grid-template-rows: repeat(3, 10px);
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    /* border: 1px solid black; */
+}
+
+nav .burger-container span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+nav .burger-container.click :nth-child(1),
+nav .burger-container.click :nth-child(3){
+    position: absolute;
+    top: 10px;
+    width: 90%;
+    height: 3px;
+}
+
+nav .burger-container.click :nth-child(1){
+    transform: rotate(45deg);
+    transition: transform .2s ease-in-out;
+}
+
+nav .burger-container.click :nth-child(2){
+    display: none;
+}
+
+nav .burger-container.click :nth-child(3){
+    transform: rotate(-45deg);
+    transition: transform .2s ease-in-out;
+}
+
+nav .nav-container-desktop{
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+nav .side-pop-up{
+    /* display: none; */
+    width: 0;
+    height: 0;
+    transform: scaleX(0);
+}
+
+nav .side-pop-up.visible{
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 75%;
+    max-width: 400px;
+    height: 100vh;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform .1s ease-in;
+    background-color: white;
+    z-index: 1;
+}
+
+nav .side-pop-up.visible .container{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 20px 0 20px;
+    width: 100%;
+    height: 60%;
+    /* border: 1px solid black; */
+    background-color: white;
+}
+
+nav .side-pop-up.visible .container img{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60%;
+    max-width: 147px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+
+nav .side-pop-up.visible .container a{
+    text-decoration: none;
+    color: #0c0c0c;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: capitalize;
+    padding-bottom: 5%;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.main-index{
+    margin-top: 40px;
+    /* border: 1px solid black; */
+}
+
+.main-index .first-section .first-container h2,
+.main-index .second-section .first-container h2{
+    font-size: 30px;
+    color: #005b21;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.main-index .first-section .first-container p,
+.main-index .second-section .first-container p{
+    width: 100%;
+    max-width: 1078px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 1.5px;
+    word-spacing: 1.5px;
+    padding: 0 15px 0 15px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    /* border: 1px solid black; */
+}
+
+.main-index .first-section .second-container,
+.main-index .second-section .second-container{
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.main-index .second-section .second-container{
+    margin-bottom: 40px;
+    max-width: 1587px;
+    margin: auto;
+}
+
+.main-index .first-section .second-container div,
+.main-index .second-section .second-container div{
+    position: relative;
+    /* border: 1px solid black; */
+    text-align: center;
+    width: 100%;
+    max-width: 540px;
+    height: 275px;
+    text-decoration: none;
+    color: #fff;
+    background-size: 100% 275px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-size .5s ease-in;
+}
+
+.main-index .first-section .second-container div:hover,
+.main-index .second-section .second-container div:hover{
+    background-size: 105% 300px;
+    transition: background-size .5s ease-in;
+}
+
+.main-index .first-section .second-container div p,
+.main-index .first-section .second-container div a,
+.main-index .second-section .second-container div p,
+.main-index .second-section .second-container div a{
+    position: absolute;
+    bottom: 15px;
+    width: 50%;
+    font-weight: 900;
+}
+
+.main-index .first-section .second-container div p,
+.main-index .second-section .second-container div p{
+    font-size: 19px;
+    text-transform: capitalize;
+}
+
+.main-index .first-section .second-container div a,
+.main-index .second-section .second-container div a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    max-width: 117px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #fdd200;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+
+.main-index .first-section .second-container div .button,
+.main-index .second-section .second-container div .button{
+    right: 3%;
+}
+
+.main-index .first-section .second-container div .button:hover,
+.main-index .second-section .second-container div .button:hover{
+    color: #fdd200;
+    background-color: white;
+}
+
+.main-index .first-section .second-container .experience-image-container{
+    position: relative;
+}
+
+.main-index .first-section .second-container .experience-image-container .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000006b;
+}
+
+.main-index .first-section .second-container .nature-outdoor{
+    background-image: url(/background_images/nature_and_outdoor_activities.jpg);
+}
+
+.main-index .first-section .second-container .culture{
+    background-image: url(/background_images/culture.jpg);
+}
+
+.main-index .first-section .second-container .gastronomy{
+    background-image: url(/background_images/gastronomy.jpg);
+}
+
+.main-index .first-section .second-container .sportfishing{
+    background-image: url(/background_images/sportfishing.jpg);
+}
+
+.main-index .first-section .second-container .sun-beach{
+    background-image: url(/background_images/sun\ and\ beach.jpg);
+}
+
+.main-index .second-section{
+    margin-top: 40px;
+    /* border: 1px solid black; */
+}
+
+.main-index .second-section .second-container .destination-image-container{
+    position: relative;
+}
+
+.main-index .second-section .second-container .destination-image-container .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000006b;
+}
+
+.main-index .second-section .second-container .teresina{
+    background-image: url(/places_to_visit/teresina.jpg);
+}
+
+.main-index .second-section .second-container .salvador{
+    background-image: url(/places_to_visit/salvador.jpg);
+}
+
+.main-index .second-section .second-container .campo-grande{
+    background-image: url(/places_to_visit/campo\ grande.jpg);
+}
+
+.main-index .second-section .second-container .curitiba{
+    background-image: url(/places_to_visit/curitiba.jpg);
+}
+
+.main-index .second-section .second-container .macapa{
+    background-image: url(/places_to_visit/macapa.jpg);
+}
+
+.main-index .second-section .second-container .florianopolis{
+    background-image: url(/places_to_visit/florianopolis.jpg);
+}
+
+.main-index .second-section .second-container .fernando-de-noronha{
+    background-image: url(/places_to_visit/fernando\ de\ noronha.jpg);
+}
+
+.main-index .second-section .second-container .jalapao-state-park{
+    background-image: url(/places_to_visit/jalapao\ state\ park.jpg);
+}
+
+.main-index .second-section .second-container .aracaju{
+    background-image: url(/places_to_visit/aracaju.jpg);
+}
+
+footer{
+    display: grid;
+    background-color: #0c0c0c;
+}
+
+footer :nth-child(2),
+footer :nth-child(3){
+    margin-top: 15px;
+}
+
+footer .logo-container{
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+footer .logo-container img{
+    width: 50%;
+    max-width: 200px;
+    /* border: 1px solid white; */
+}
+
+footer .site{
+    display: grid;
+    /* border: 1px solid white; */
+}
+
+footer .site a{
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 35px;
+    font-size: 12px;
+    color: #d8d8d8;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer .site a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 14px;
+    width: 100%;
+    height: 2px;
+    background-color: #fdd200;
+    transform: scale(0);
+}
+
+footer .site a:hover::before{
+    transform-origin: left;
+    transform: scale(1);
+    transition: transform .4s ease-in;
+}
+
+footer .site :nth-child(1)::before{
+    content: '';
+    width: 0;
+    height: 0;
+}
+
+footer .site .site-footer{
+    color: white;
+    font-size: 20px;
+}
+
+footer .follow-us h4{
+    font-size: 20px;
+    color: white;
+    /* border: 1px solid pink; */
+    text-align: center;
+    text-transform: capitalize;
+}
+
+footer .follow-us div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    /* border: 1px solid white; */
+    width: 80%;
+    max-width: 320px;
+    height: 116px;
+    margin: auto;
+    margin-top: 20px;
+    /* background-color:white; */
+}
+
+
+footer .follow-us div span{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    /* border: 1px solid white; */
+    margin: 0;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+footer .follow-us div span:hover{
+    transform: scale(1.1);
+    transition: transform .2s ease-in;
+}
+
+footer .follow-us div .facebook{
+    background-image: url(/icons/fb.png);
+}
+
+footer .follow-us div .twitter{
+    background-image: url(/icons/twitter.png);
+}
+
+footer .follow-us div .instagram{
+    background-image: url(/icons/instagram.png);
+}
+
+footer .follow-us div .youtube{
+    background-image: url(/icons/yt.png);
+    background-size: 100px 81px;
+    background-position: center;
+}
+
+footer .follow-us div .linkedin{
+    background-image: url(/icons/linkedin.png);
+    background-size: 50%;
+    background-position: center;
+}
+
+footer .follow-us div .spotify{
+    background-image: url(/icons/spotify.png);
+}
+
+footer .follow-us div .flickr{
+    background-image: url(/icons/flickr.png);
+}
+
+footer .follow-us div .tiktok{
+    background-image: url(/icons/tiktok.png);
+    background-size: 88px 48px;
+    background-position: center;
+}
+/* style for the mobile page ends here*/
+/* style for the index page ends here */
+
+/* style for the tablet/desktop page starts here */
+/* style for the index page starts here */
+
+@media (min-width: 730px) {
+    nav .burger-container{
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    nav .nav-container-desktop{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        /* border: 1px solid red; */
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    nav .nav-container-desktop img{
+        width: 20%;
+        max-width: 196px;
+    }
+
+    nav .nav-container-desktop div{
+        display: flex;
+        justify-content: space-around;
+        width: 55%;
+        max-width: 550px;
+    }
+
+    nav .nav-container-desktop div a{
+        text-decoration: none;
+        color: white;
+        text-transform: capitalize;
+        font-weight: 900;
+    }
+
+    nav .nav-container-desktop div a:hover{
+        color: #fdd200;
+        transition: color .2s ease-in;
+    }
+    
+}
+
+@media (min-width: 1000px) {
+    .main-index .first-section .second-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-template-areas: 
+        "nature culture sb"
+        "gastronomy sportfishing sb"
+        ;
+        max-width: 1587px;
+        margin: auto;
+    }
+
+    .main-index .first-section .second-container .nature-outdoor{
+        grid-area: nature;
+    }
+    
+    .main-index .first-section .second-container .culture{
+        grid-area: culture;
+    }
+    
+    .main-index .first-section .second-container .gastronomy{
+        grid-area: gastronomy;
+    }
+    
+    .main-index .first-section .second-container .sportfishing{
+        grid-area: sportfishing;
+    }
+    
+    .main-index .first-section .second-container .sun-beach{
+        grid-area: sb;
+        height: 560px;
+        background-size: 100% 560px;
+        background-position: center;
+        transition: none;
+    }
+
+    .main-index .first-section .second-container .sun-beach:hover{
+        background-size: 105% 600px;
+        transition: background-size .5s ease-in;
+    }
+
+    .main-index .second-section .second-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    footer{
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* style for the tablet/desktop page ends here */
+/* style for the index page ends here */
+
+
+
+/* style for the nature and outdoor page starts here */
+/* style for the mobile page starts here */
+section{
+    margin-bottom: 50px;
+}
+
+.nav-experience,
+.nav-regions{
+    padding-top: 15%;
+    height: 500px;
+    background-image: url(/background_images/nature_tourism.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    /*border: 1px solid black;*/
+}
+
+.nav-experience .large-text-container,
+.nav-regions .large-text-container,
+.nav-travel-information .large-text-container{
+    position: absolute;
+    top: 64%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    /*color: rgb(34, 26, 26);*/
+    color: white;
+    /*border: 1px solid black;*/
+    width: 50%;
+    font-weight: 800;
+}
+
+.nav-experience .large-text-container h1,
+.nav-regions .large-text-container h1,
+.nav-travel-information .large-text-container h1{
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.main-experience{
+    /*width: 100%;*/
+    margin-top: 40px;
+    padding: 0 20px 0 20px;
+}
+
+.main-experience p{
+    width: 100%;
+    max-width: 1100px;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 1.5px;
+    margin: auto;
+    margin-bottom: 40px;
+    font-weight: 500;
+    /* color: #7A7A7A; */
+}
+
+.main-experience p span{
+    font-weight: 800;
+}
+
+.main-experience .container-places{
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1299px;
+    margin: auto;
+}
+
+.main-experience .container-places .places{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    border-radius: 20px;
+    max-width: 418px;
+    cursor: pointer;
+}
+
+
+
+.main-experience .container-places .places .image-container{
+    position: relative;
+}
+
+.main-experience .container-places .places .image-container .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 99%;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #0000006b;
+}
+
+.main-experience .container-places .places .image-container img{
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.main-experience .container-places .places .image-container p{
+    position: absolute;
+    bottom: 10px;
+    font-size: 30px;
+    color: white;
+}
+
+.main-experience .container-places .places .image-container p:hover{
+    color: #fdd200;
+    transition: color .3s ease-in;
+    cursor: pointer;
+}
+
+.main-experience .container-places div p{
+    height: auto;
+    margin: 0;
+    padding: 0 10px 10px 10px;
+}
+/* style for the mobile page ends here */
+
+/* style for the table/desktop page ends here */
+@media (min-width: 1000px) {
+    .nav-experience{
+        padding-top: 15%;
+        height: 500px;
+        background-image: url(/background_images/nature_tourism.jpg);
+        background-size: auto;
+        background-position: center center;
+        /*border: 1px solid black;*/
+    }
+
+    .main-experience .container-places{
+        display: grid;
+        justify-content: center;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* style for the table/desktop ends here */
+/* style for the nature and outdoor page ends here */
+
+
+/* style for the culture page starts here*/
+/* style for the mobile page starts here*/
+.nav-culture{
+    background-image: url(/background_images/culture_tourism.jpg);
+}
+/* style for the culture page ends here*/
+/* style for the mobile page ends here*/
+
+/* style for the gastronomy page starts here*/
+/* style for the mobile page starts here*/
+.nav-gastronomy{
+    background-image: url(/background_images/gastronomy_tourism.jpg);
+}
+/* style for the gastronomy page ends here*/
+/* style for the mobile page ends here*/
+
+/* style for the sportfishing page starts here*/
+/* style for the mobile page starts here*/
+.nav-sportfishing{
+    background-image: url(/background_images/sportfishing_tourism.jpg);
+}
+/* style for the sportfishing page ends here*/
+/* style for the mobile page ends here*/
+
+
+/* style for the sun and beach page starts here*/
+/* style for the mobile page starts here*/
+.nav-sun-and-beach{
+    background-image: url(/background_images/sun_and_beach_tourism.jpg);
+}
+/* style for the sun and beach page ends here*/
+/* style for the mobile page ends here*/
+
+
+/* style for the teresina page starts here*/
+/* style for the mobile page starts here*/
+.nav-amazing-places,
+.nav-regions,
+.nav-travel-information{
+    padding-top: 15%;
+    height: 500px;
+    background-image: url(/amazing_places_to_visit/teresina.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    margin-bottom: 40px;
+        /*border: 1px solid black;*/
+}
+
+.nav-amazing-places .large-text-container .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000006b;
+}
+
+.nav-amazing-places .large-text-container h1{
+    position: absolute;
+    top: 64%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    /* color: rgb(34, 26, 26); */
+    color: white;
+    /* border: 1px solid black; */
+    width: 50%;
+    font-weight: 800;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.main-amazing-places{
+    margin-bottom: 50px;
+}
+
+.main-amazing-places .bold-text{
+    font-size: 16px;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 40px;
+    font-weight: 900;
+}
+
+.main-amazing-places .first-section-text,
+.main-amazing-places .second-section-text{
+    font-weight: 500;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 40px;
+    color: #7A7A7A;
+}
+
+.main-amazing-places .middle-image-container{
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.main-amazing-places .middle-image-container img{
+    width: 100%;
+}
+
+.main-amazing-places .middle-image-container p{
+    text-align: right;
+    margin: 0;
+    font-weight: 500;
+    color: #7A7A7A;
+}
+
+.main-amazing-places .images-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+.main-amazing-places .images-container img{
+    width: 300px;
+    height: 200px;
+}
+/* style for the teresina page ends here*/
+/* style for the mobile page ends here*/
+
+/* style for the salvador page starts here*/
+/* style for the mobile page starts here*/
+
+.nav-salvador{
+    background-image: url(/amazing_places_to_visit/salvador.jpg);
+}
+
+/* style for the mobile page ends here*/
+/* style for the salvador page ends here*/
+
+/* style for the salvador page starts here*/
+/* style for the mobile page starts here*/
+
+.nav-campo-grande{
+    background-image: url(/amazing_places_to_visit/campo_grande.jpg);
+}
+
+/* style for the mobile page ends here*/
+/* style for the salvador page ends here*/
+
+/* style for the curitiba page starts here*/
+/* style for the mobile page starts here*/
+
+.nav-curitiba{
+    background-image: url(/amazing_places_to_visit/curitiba.jpg);
+}
+
+/* style for the mobile page ends here*/
+/* style for the curitiba  page ends here*/
+
+/* style for the macapa page starts here*/
+/* style for the mobile page starts here*/
+
+.nav-macapa{
+    background-image: url(/amazing_places_to_visit/macapa.jpg);
+}
+
+/* style for the mobile page ends here*/
+/* style for the macapa  page ends here*/
+
+
+/* style for the florianopolis page starts here*/
+/* style for the mobile page starts here*/
+
+.nav-florianopolis{
+    background-image: url(/amazing_places_to_visit/florianopolis.jpg);
+}
+
+/* style for the mobile page ends here*/
+/* style for the florianopolis  page ends here*/
+
+
+/* style for the mobile page starts here */
+/* style for the fernando de noronha page starts here */
+
+.nav-fernando-de-noronha{
+    background-image: url(/amazing_places_to_visit/fernando-de-noronha.jpg);
+}
+
+/* style for the fernando de noronha page ends here */
+/* style for the mobile page ends here */
+
+/* style for the mobile page starts here */
+/* style for the jalapao state park page starts here */
+
+.nav-jalapao-state-park{
+    background-image: url(/amazing_places_to_visit/jalapao-state-park.jpg);
+}
+
+/* style for the jalapao state park page ends here */
+/* style for the mobile page ends here */
+
+/* style for the mobile page starts here */
+/* style for the aracaju page starts here */
+
+.nav-aracaju{
+    background-image: url(/amazing_places_to_visit/aracaju.jpg);
+}
+
+/* style for the aracaju page ends here */
+/* style for the mobile page ends here */
+
+/* style for the mobile page starts here */
+/* style for the aracaju page starts here */
+
+.nav-regions{
+    background-image: url(/background_images/regions.jpg);
+}
+
+/* style for the aracaju page ends here */
+/* style for the mobile page ends here */
+
+
+
+/* style for the regions page starts here*/
+/* style for the mobile page starts here */
+
+.main-regions{
+    /* border: 1px solid black; */
+    margin-bottom: 40px;
+}
+
+.main-regions .directions-container{
+    display: grid;
+}
+
+.main-regions .directions-container a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    height: 62px;
+    color: black;
+    background-color: #fdd200;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main-regions .directions-container a:hover{
+    color: #fdd200;
+    background-color: white;
+}
+
+.main-regions .places{
+    max-width: 1200px;
+    /* border: 1px solid pink; */
+    margin: auto;
+    margin-top: 40px;
+}
+
+.main-regions .places h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.main-regions .places p{
+    color: #7A7A7A;
+    word-spacing: 5px;
+    margin-bottom: 30px;
+    /* padding: 0 15px 0 15px; */
+}
+
+.main-regions .big-box{
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+}
+
+.main-regions .big-box .box{
+    display: grid;
+    max-width: 388px;
+    height: auto;
+    /* border: 1px solid black; */
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    border-radius: 20px;
+}
+
+.main-regions .big-box .box p{
+    padding: 0 15px 0 15px;
+}
+
+.main-regions .big-box .box .images-container-places .image{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 258px;
+    background-size: 100% 100%;
+    background-position: center center;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 20px;
+}
+
+.main-regions .big-box .box .images-container-places .boa-vista{
+    background-image: url(/regions/north/boa_vista.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .jalapao-state-park{
+    background-image: url(/regions/north/jalapao_state_park.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .manaus{
+    background-image: url(/regions/north/manaus.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .fortaleza{
+    background-image: url(/regions/northeast/fortaleza.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .joao-pessoa{
+    background-image: url(/regions/northeast/joao_pessoa.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .maceio{
+    background-image: url(/regions/northeast/maceio.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .bonito{
+    background-image: url(/regions/midwest/bonito.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .caldas-novas{
+    background-image: url(/regions/midwest/caldas_novas.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .campo-grande{
+    background-image: url(/regions/midwest/campo_grande.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .buzios{
+    background-image: url(/regions/southeast/buzios.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .ilha-grande{
+    background-image: url(/regions/southeast/ilha_grande.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .sao-paulo{
+    background-image: url(/regions/southeast/sao_paulo.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .curitiba{
+    background-image: url(/regions/south/curitiba.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .gramado{
+    background-image: url(/regions/south/gramado.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .porto-alegre{
+    background-image: url(/regions/south/porto_alegre.jpg);
+}
+
+.main-regions .big-box .box .images-container-places .image .overlay{
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000006b;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.main-regions .big-box .box .images-container-places .image h5{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+/* style for the mobile page ends here */
+
+/* style for the tablet/desktop page starts here */
+
+@media (min-width: 880px) {
+    .main-regions .directions-container{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .main-regions .directions-container a{
+        width: 165px;
+        border-radius: 28px;
+
+    }
+
+    .main-regions .big-box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}
+
+
+/* style for the tablet/desktop page ends here */
+
+
+/* style for the regions page ends here */
+
+/* style for the travel information starts here */
+/* style for the mobile page starts here */
+
+.nav-travel-information{
+    background-image: url(/background_images/travel_information.jpg);
+}
+
+.main-travel-information{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.main-travel-information .accordion{
+    border-bottom: 2.5px solid #7A7A7A;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.main-travel-information .accordion h2{
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0 15px 0 15px;
+    color: rgb(0, 91, 33);
+    font-size: 18px;
+}
+
+.main-travel-information .accordion h2 span{
+    position: relative;
+    display: inline-block;
+    min-width: 25px;
+    min-height: 25px;
+    background-image: url(/icons/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70% 50%;
+    transform: rotate(0deg);
+    transition: transform .3s ease-in;
+}
+
+.main-travel-information .accordion h2 span.flip{
+    transform: rotate(181deg);
+    transition: transform .5s ease-in;
+}
+
+.main-travel-information .accordion-text{
+    /* min-height: 0; */
+    max-height: 0;
+    opacity: 0;
+    transition: max-height .4s ease-in, opacity .3s ease-in;
+
+}
+
+.main-travel-information .accordion-text.visible{
+    opacity: 1;
+    max-height: 2000px;
+    transition: max-height .5s ease-in, opacity .5s ease-in;
+    margin-top: 10px;
+    /* height: 300px;
+    transition: height .3s ease-in; */
+}
+
+.main-travel-information .accordion-text ul li{
+    letter-spacing: 1.5px;
+    line-height: 25px;
+    padding: 0 10px 0 10px;
+    font-style: italic;
+}
+
+.main-travel-information .accordion-text ul li span{
+    font-weight: 900;
+}
+
+.main-travel-information .accordion-text ul li img{
+    width: 100%;
+}
+
+/* style for the mobile page ends here */
+/* style for the travel information ends here */
