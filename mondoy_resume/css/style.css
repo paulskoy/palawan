@@ -1,0 +1,533 @@
+*, *::before, *::after{  /*selecting all element by using the asterisk (*) sign*/
+    font-family: Imbue; /*setting the font to imbue and making all the element margin 0 and the box sizing to border box for easy styling*/
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* mobile start width- 360px*/
+body{ /*making the body to display flex for it to be divided into two separate column*/
+    display: flex;
+}
+
+/* first section start */
+.first-sec{ /*setting the color height and alignment of the text*/
+    color: white;
+    background-color: rgba(20, 1, 6, 1);
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+
+@media (min-height: 741px) { /*making the first section which is the left side containing the picture and about me text to become 100vh to fill the entire screen*/
+    .first-sec{
+        height: 100vh;
+    }
+    
+}
+
+.first-sec .image-holder{ /*giving the image holder container a background image and setting the width and margin of the image container in order for the image to take the full size of the container*/
+    background-image: url(/images/mondoy_image-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 182px;
+    max-width: 205px;
+    height: 198px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.first-sec .about-me{ /*setting the max width margin and padding of the about me container*/
+    max-width: 300px;
+    margin: auto;
+    padding-left: 5px;
+}
+
+.first-sec .line{ /*making the line to display block for it to be visible and giving a height of 2px for its thickness and give it a white background color and a bottom margin*/
+    display: block;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.first-sec .about-me h2{ /*styling the h2 on the about me container*/
+    font-size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.first-sec .about-me p{ /*styling the p (paragraph) tag on the about me section*/
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: left;
+    margin-bottom: 20px;
+    
+}
+
+.first-sec .personal-info-mobile .email-container h4,
+.first-sec .personal-info-mobile .facebook-container h4,
+.first-sec .personal-info-mobile .contact-container h4{ /*adjusting the font size and margin of the h4 inside of the email, facebook and contact container*/
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.first-sec .personal-info-mobile .email-container p,
+.first-sec .personal-info-mobile .facebook-container p,
+.first-sec .personal-info-mobile .contact-container p{ /*adjusting the font size of the p tag inside of the email, facebook and contact container*/
+    font-size: 18px;
+}
+
+.first-sec .personal-info-mobile .email-container,
+.first-sec .personal-info-mobile .facebook-container,
+.first-sec .personal-info-mobile .contact-container{ /*giving each container a bottom margin for spacing*/
+    margin-bottom: 15px;
+}
+/* first section end */
+
+/* second section start */
+.second-sec { /*giving the second section a padding*/
+    padding: 8px;
+}
+.second-sec .name-address-container h1{ /*adjusting the font size, font weight, capitaliziation and margin the bottom margin of the h1 container inside of the name address container*/
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 7px;
+}
+
+.second-sec .name-address-container p{ /*adjusting the font size, font weight and margin the bottom margin of the p (paragraph) tag container inside of the name address container*/
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.second-sec .educational-training-container .educational-container,
+.second-sec .educational-training-container .training-container,
+.second-sec .hobbies-languages-container .hobbies-container{ /*adjusting the bottom margin of each container for spacing*/
+    margin-bottom: 20px;
+}
+
+.second-sec .educational-training-container .educational-container h1,
+.second-sec .educational-training-container .training-container h1,
+.second-sec .hobbies-languages-container .hobbies-container h1,
+.second-sec .hobbies-languages-container .languages-container h1{ /*adjusting the font size, weight capitilazation and line height of h1 inside of each container*/
+    font-weight: 700;
+    font-size: 23px;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+
+.second-sec .educational-training-container .educational-container ul,
+.second-sec .educational-training-container .training-container ul,
+.second-sec .hobbies-languages-container .languages-container ul{ /*styling the ul (unorder list) inside of each container*/
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.second-sec .educational-training-container .educational-container ul :nth-child(1){ /*grabbing the first child of the ul(unorder list) which is the li (list) and giving it a bottom margin for spacing*/
+    margin-bottom: 8px;
+}
+
+.second-sec .box .hobbies-languages-container{ /*stripping the padding of this container*/
+    padding-left: 0;
+}
+
+.second-sec .hobbies-languages-container .hobbies-container p{ /*giving margin for the p tag inside of the hobbies container*/
+    margin-left: 8px;
+    margin-top: 10px;
+}
+.second-sec .hobbies-languages-container .languages-container ul{ /*setting the font size and weight for the ul*/
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.second-sec .hobbies-languages-container .languages-container ul li{ /*setting a margin bottom for the li*/
+    margin-bottom: 10px;
+}
+
+.second-sec .hobbies-languages-container .personal-info-container-desktop{ /*making the height and width of personal info container in order for it to not be visible */
+    display: none;
+    width: 0;
+    height: 0;
+}
+/* second section end */
+/* media query start */
+@media (min-width: 500px) { /*if the screen hits the minimum width of 500 then execute the following styles below*/
+    .first-sec{
+        width: 49%;
+    }
+
+    .first-sec .image-holder{
+        background-image: url(/images/mondoy_image-tablet.png);
+        background-size: cover;
+        width: 206px;
+        height: 250px;
+    }
+
+    .first-sec .about-me h2{
+        font-size: 40px;
+    }
+
+    .first-sec .about-me p{
+        font-size: 19px;
+    }
+
+    .first-sec .personal-info-mobile .email-container h4, 
+    .first-sec .personal-info-mobile .facebook-container h4, 
+    .first-sec .personal-info-mobile .contact-container h4{
+        font-size: 25px;
+    }
+
+    .second-sec .name-address-container h1{
+        font-size: 35px;
+    }
+
+    .second-sec .name-address-container p {
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+
+    .second-sec .educational-training-container .educational-container,
+    .second-sec .educational-training-container .training-container,
+    .second-sec .hobbies-languages-container .hobbies-container{
+        margin-bottom: 56px;
+    }
+
+    .second-sec .educational-training-container .educational-container h1, 
+    .second-sec .educational-training-container .training-container h1, 
+    .second-sec .hobbies-languages-container .hobbies-container h1, 
+    .second-sec .hobbies-languages-container .languages-container h1{
+        font-size: 31px;
+        text-align: center;
+        padding-left: 10px;
+        margin-bottom: 15px;
+    }
+
+    .second-sec .hobbies-languages-container .hobbies-container p{
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .second-sec .educational-training-container .educational-container h1{
+        padding-left: 10px;
+    }
+
+    .second-sec .educational-training-container .educational-container ul, 
+    .second-sec .educational-training-container .training-container ul, 
+    .second-sec .hobbies-languages-container .languages-container ul {
+        list-style: disc;
+        padding-left: 15px;
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    .second-sec .hobbies-languages-container .languages-container ul{
+        font-size: 28px;
+        list-style-type: none;
+        text-align: center;
+    }
+
+    .second-sec .hobbies-languages-container .languages-container ul li{
+        margin-bottom: 10px;
+    }
+
+    .second-sec .hobbies-languages-container .hobbies-container{
+        margin-bottom: 15px;
+    }
+
+}
+/* media query end */
+/* mobile end */
+
+/* tablet start width - 768px */
+@media (min-width: 768px) { /*if the screen hits a minimum width of 768px execute the following styles below*/
+    .first-sec{
+        width: 33%;
+    }
+
+    .first-sec .image-holder {
+        background-image: url(/images/mondoy_image-tablet.png);
+        background-size: cover;
+        width: 206px;
+        height: 250px;
+    }
+
+    .first-sec .about-me {
+        max-width: 230px;
+    }
+
+    .second-sec .name-address-container h1 {
+        font-size: 60px;
+    }
+
+    .second-sec .educational-training-container .educational-container, 
+    .second-sec .educational-training-container .training-container, 
+    .second-sec .hobbies-languages-container .hobbies-container {
+        display: grid;
+        justify-content: left;
+        padding-left: 45px;
+        margin-bottom: 28px;
+    }
+
+    .second-sec .hobbies-languages-container .hobbies-container{
+        padding: 0;
+        justify-content: center;
+    }
+
+    .second-sec .educational-training-container .educational-container ul, 
+    .second-sec .educational-training-container .training-container ul {
+        width: 380px;
+        list-style: disc;
+        padding-left: 15px;
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    .second-sec .educational-training-container .educational-container ul{
+        width: 194px;
+    }
+
+    .second-sec .educational-training-container .educational-container h1, 
+    .second-sec .educational-training-container .training-container h1, 
+    .second-sec .hobbies-languages-container .hobbies-container h1, 
+    .second-sec .hobbies-languages-container .languages-container h1 {
+        font-size: 31px;
+        text-align: center;
+        padding-left: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (min-width: 900px) { /*if the screen hits the minimum width of 900px then execute the following styles below*/
+    .first-sec{
+        width: 45%;
+    }
+
+    .first-sec .image-holder {
+        background-image: url(/images/mondoy_image-laptop.png);
+        background-size: contain;
+        width: 300px;
+        max-width: none;
+        height: 319px
+    }
+
+    .first-sec .about-me {
+        max-width: 299px;
+    }
+
+    .first-sec .about-me h2 {
+        font-size: 49px;
+    }
+
+    .first-sec .about-me p {
+        font-size: 25px;
+    }
+
+    .first-sec .personal-info-mobile .email-container h4, 
+    .first-sec .personal-info-mobile .facebook-container h4, 
+    .first-sec .personal-info-mobile .contact-container h4 {
+        font-size: 28px;
+    }
+
+    .first-sec .personal-info-mobile .email-container p, 
+    .first-sec .personal-info-mobile .facebook-container p,
+    .first-sec .personal-info-mobile .contact-container p {
+        font-size: 21px;
+    }
+
+    .second-sec .educational-training-container .educational-container h1, 
+    .second-sec .educational-training-container .training-container h1, 
+    .second-sec .hobbies-languages-container .hobbies-container h1, 
+    .second-sec .hobbies-languages-container .languages-container h1 {
+        font-size: 36px;
+    }
+
+    .second-sec .educational-training-container .educational-container ul,
+    .second-sec .educational-training-container .training-container ul,
+    .second-sec .hobbies-languages-container .hobbies-container p{
+        font-size: 25px;
+    }
+
+    .second-sec .hobbies-languages-container .hobbies-container{
+        margin-bottom: 45px;
+    }
+
+    .second-sec .educational-training-container{
+        margin-bottom: 70px;
+    }
+
+    .second-sec .hobbies-languages-container .languages-container ul {
+        font-size: 35px;
+    }
+
+
+}
+/* tablet end */
+
+/* desktop start width - 1366px */
+@media (min-width: 1150px){ /*if the screen hits the minimum width of 1150px then execute the following styles below*/
+    .first-sec{
+        width: 30%;
+    }
+
+    .first-sec .line{
+        display: none;
+        height: 0;
+        width: 0;
+    }
+
+    .first-sec .image-holder{
+        background-image: url(/images/mondoy_image-desktop.png);
+    }
+
+    .first-sec .personal-info-mobile{
+        display: none;
+        height: 0;
+        width: 0;
+    }
+
+    .second-sec .name-address-container h1{
+        font-size: 85px;
+    }
+
+    .second-sec .name-address-container p {
+        font-size: 30px;
+    }
+
+    .second-sec .educational-training-container .educational-container h1, 
+    .second-sec .educational-training-container .training-container h1, 
+    .second-sec .hobbies-languages-container .hobbies-container h1, 
+    .second-sec .hobbies-languages-container .languages-container h1 {
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .second-sec .educational-training-container {
+        margin-bottom: 0;
+    }
+
+    .second-sec .hobbies-languages-container .hobbies-container h1,
+    .second-sec .hobbies-languages-container .languages-container h1{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .second-sec .hobbies-languages-container .hobbies-container p{
+        font-size: 30px;
+    }
+
+    .second-sec .hobbies-languages-container .languages-container ul {
+        display: flex;
+        justify-content: space-between;
+        width: 411px;
+        font-size: 35px;
+    }
+
+    .second-sec .box{
+        display: flex;
+    }
+
+    .second-sec .box .hobbies-languages-container .personal-info-container-desktop {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: auto;
+        height: auto;
+        margin-top: 40px;
+    }
+
+    .second-sec .box .hobbies-languages-container .personal-info-container-desktop .email-container h4,
+    .second-sec .box .hobbies-languages-container .personal-info-container-desktop .facebook-container h4,
+    .second-sec .box .hobbies-languages-container .contact-container h4{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .second-sec .box .hobbies-languages-container .personal-info-container-desktop .email-container{
+        margin-bottom: 10px;
+    }
+
+    .second-sec .box .hobbies-languages-container .personal-info-container-desktop .email-container p,
+    .second-sec .box .hobbies-languages-container .personal-info-container-desktop .facebook-container p,
+    .second-sec .box .hobbies-languages-container .contact-container p{
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .second-sec .box .hobbies-languages-container .contact-container p{
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (min-width: 1700px) { /*if the screen hits the minimum width of 1700px then execute the following styles below*/
+    .first-sec{
+        height: 100vh;
+    }
+
+    .first-sec .image-holder {
+        width: 366px;
+        max-width: none;
+        height: 408px;
+        background-image: url(/images/mondoy_image-desktop.png);
+    }
+
+    .first-sec .about-me {
+        max-width: 377px;
+    }
+
+    .first-sec .about-me h2 {
+        font-size: 61px;
+    }
+
+    .first-sec .about-me p {
+        line-height: 33px;
+        font-size: 29px;
+    }
+
+    .second-sec .name-address-container h1 {
+        font-size: 107px;
+        padding-left: 23px;
+    }
+
+    .second-sec .educational-training-container .educational-container h1, 
+    .second-sec .educational-training-container .training-container h1, 
+    .second-sec .hobbies-languages-container .hobbies-container h1, 
+    .second-sec .hobbies-languages-container .languages-container h1 {
+        font-size: 69px;
+        text-align: center;
+        margin-bottom: 22px;
+    }
+
+    .second-sec .educational-training-container .educational-container ul, 
+    .second-sec .educational-training-container .training-container ul, 
+    .second-sec .hobbies-languages-container .hobbies-container p {
+        font-size: 36px;
+    }
+
+    .second-sec .box .hobbies-languages-container .personal-info-container-desktop .email-container h4, 
+    .second-sec .box .hobbies-languages-container .personal-info-container-desktop .facebook-container h4, 
+    .second-sec .box .hobbies-languages-container .contact-container h4 {
+        font-size: 35px;
+    }
+
+    .second-sec .box .hobbies-languages-container .personal-info-container-desktop .email-container p, 
+    .second-sec .box .hobbies-languages-container .personal-info-container-desktop .facebook-container p, 
+    .second-sec .box .hobbies-languages-container .contact-container p {
+        font-size: 28px;
+    }
+
+    .second-sec .hobbies-languages-container .hobbies-container {
+        margin-bottom: 104px;
+    }
+
+    .second-sec .box .hobbies-languages-container{
+        padding-left: 74px;
+    }
+}
+/* desktop end */
