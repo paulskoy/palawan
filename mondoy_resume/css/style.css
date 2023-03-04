@@ -26,7 +26,7 @@ body{ /*making the body to display flex for it to be divided into two separate c
 }
 
 .first-sec .image-holder{ /*giving the image holder container a background image and setting the width and margin of the image container in order for the image to take the full size of the container*/
-    background-image: url(../images/mondoy_image-mobile.png);
+    background-image: url("../images/mondoy_image-mobile.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
