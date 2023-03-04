@@ -26,7 +26,7 @@ body{ /*making the body to display flex for it to be divided into two separate c
 }
 
 .first-sec .image-holder{ /*giving the image holder container a background image and setting the width and margin of the image container in order for the image to take the full size of the container*/
-    background-image: url(/images/mondoy_image-mobile.png);
+    background-image: url(../images/mondoy_image-mobile.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -163,7 +163,7 @@ body{ /*making the body to display flex for it to be divided into two separate c
     }
 
     .first-sec .image-holder{
-        background-image: url(/images/mondoy_image-tablet.png);
+        background-image: url(../images/mondoy_image-tablet.png);
         background-size: cover;
         width: 206px;
         height: 250px;
@@ -251,7 +251,7 @@ body{ /*making the body to display flex for it to be divided into two separate c
     }
 
     .first-sec .image-holder {
-        background-image: url(/images/mondoy_image-tablet.png);
+        background-image: url(../images/mondoy_image-tablet.png);
         background-size: cover;
         width: 206px;
         height: 250px;
@@ -309,7 +309,7 @@ body{ /*making the body to display flex for it to be divided into two separate c
     }
 
     .first-sec .image-holder {
-        background-image: url(/images/mondoy_image-laptop.png);
+        background-image: url(../images/mondoy_image-laptop.png);
         background-size: contain;
         width: 300px;
         max-width: none;
@@ -382,7 +382,7 @@ body{ /*making the body to display flex for it to be divided into two separate c
     }
 
     .first-sec .image-holder{
-        background-image: url(/images/mondoy_image-desktop.png);
+        background-image: url(../images/mondoy_image-desktop.png);
     }
 
     .first-sec .personal-info-mobile{
@@ -474,7 +474,7 @@ body{ /*making the body to display flex for it to be divided into two separate c
         width: 366px;
         max-width: none;
         height: 408px;
-        background-image: url(/images/mondoy_image-desktop.png);
+        background-image: url(../images/mondoy_image-desktop.png);
     }
 
     .first-sec .about-me {
